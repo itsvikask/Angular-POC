@@ -1,5 +1,5 @@
 # POC for Angular, it's libraries & concepts
-Sample repository to make use of Angular utils such as
+Repository to make use of Angular concepts such as
 
 angular material
 
