@@ -46,6 +46,7 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { InMemoryDataService } from './services/data/in-memory-data.service';
 import { HttpClientModule } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -99,7 +100,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatTreeModule,
     OverlayModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService)
+    environment.production ? [] :HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
   providers: [],
   bootstrap: [AppComponent]

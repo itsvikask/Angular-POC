@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
   }
 
   validateUser(){
-    this.userDataService.getUsers();
+    this.userDataService.getUsers('LoginComponent');
     this._router.navigate(['home']);
   }
 
